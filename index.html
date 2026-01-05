@@ -1,1 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Venturina - ePortfolio</title>
+    
+    <!-- Tailwind CSS (CDN for standalone usage) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="scrollToSection('home')">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                        L
+                    </div>
+                    <span class="font-bold text-lg tracking-tight">Lucas Venturina</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8" id="desktop-menu">
+                    <button onclick="scrollToSection('home')" class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-blue-600" data-target="home">Home</button>
+                    <button onclick="scrollToSection('about')" class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-blue-600" data-target="about">About</button>
+                    <button onclick="scrollToSection('experience')" class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-blue-600" data-target="experience">Experience</button>
+                    <button onclick="scrollToSection('projects')" class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-blue-600" data-target="projects">Projects</button>
+                    <button onclick="scrollToSection('skills')" class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-blue-600" data-target="skills">Skills</button>
+                    <button onclick="scrollToSection('education')" class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-blue-600" data-target="education">Education</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white shadow-lg absolute w-full">
+            <div class="py-2 space-y-1">
+                <button onclick="scrollToSection('home')" class="mobile-nav-link block w-full text-left px-4 py-3 text-sm font-medium border-l-4 border-transparent text-slate-600 hover:bg-slate-50 transition-colors" data-target="home">Home</button>
+                <button onclick="scrollToSection('about')" class="mobile-nav-link block w-full text-left px-4 py-3 text-sm font-medium border-l-4 border-transparent text-slate-600 hover:bg-slate-50 transition-colors" data-target="about">About</button>
+                <button onclick="scrollToSection('experience')" class="mobile-nav-link block w-full text-left px-4 py-3 text-sm font-medium border-l-4 border-transparent text-slate-600 hover:bg-slate-50 transition-colors" data-target="experience">Experience</button>
+                <button onclick="scrollToSection('projects')" class="mobile-nav-link block w-full text-left px-4 py-3 text-sm font-medium border-l-4 border-transparent text-slate-600 hover:bg-slate-50 transition-colors" data-target="projects">Projects</button>
+                <button onclick="scrollToSection('skills')" class="mobile-nav-link block w-full text-left px-4 py-3 text-sm font-medium border-l-4 border-transparent text-slate-600 hover:bg-slate-50 transition-colors" data-target="skills">Skills</button>
+                <button onclick="scrollToSection('education')" class="mobile-nav-link block w-full text-left px-4 py-3 text-sm font-medium border-l-4 border-transparent text-slate-600 hover:bg-slate-50 transition-colors" data-target="education">Education</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-white overflow-hidden">
+            <div class="absolute inset-0 bg-grid-slate-100 pattern-mask"></div>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
+                        Hi, I'm <span class="text-blue-600">Lucas Venturina</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-600 mb-8 font-light">
+                        Instructional Technologist & IT Support Specialist
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-500 mb-10">
+                        <a href="mailto:lushventurina@gmail.com" class="flex items-center gap-2 hover:text-blue-600 transition-colors">
+                            <i data-lucide="mail" class="w-4 h-4"></i> lushventurina@gmail.com
+                        </a>
+                        <span class="hidden sm:inline text-slate-300">|</span>
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i> (505) 582-8229
+                        </span>
+                        <span class="hidden sm:inline text-slate-300">|</span>
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i> Navajo, NM
+                        </span>
+                        <span class="hidden sm:inline text-slate-300">|</span>
+                        <a href="https://linkedin.com/in/lmventurinajr26" target="_blank" rel="noreferrer" class="flex items-center gap-2 hover:text-blue-600 transition-colors">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                        </a>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <button onclick="scrollToSection('contact')" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">
+                            Contact Me
+                        </button>
+                        <button onclick="scrollToSection('experience')" class="px-6 py-3 bg-white text-slate-700 font-semibold rounded-full border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm">
+                            View Experience
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-slate-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-blue-100 text-blue-600 rounded-lg">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-slate-900">Professional Summary</h2>
+                    </div>
+                    <p class="text-lg text-slate-700 leading-relaxed">
+                        Experienced professional with over 10 years in instructional technology, IT support, and compliance-driven environments. Skilled in troubleshooting, training, systems integration, and workflow optimization. Adept at translating technical concepts for diverse audiences and delivering scalable solutions in academic and enterprise settings. Strong foundation in cybersecurity, cloud platforms, and full-stack development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="p-3 bg-indigo-100 text-indigo-600 rounded-lg">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Professional Experience</h2>
+                </div>
+                
+                <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
+                    
+                    <!-- Job 1 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:flex-row-reverse group">
+                        <!-- Timeline Dot -->
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-indigo-500 shadow shrink-0 md:order-1 md:-translate-x-1/2 z-10">
+                            <i data-lucide="briefcase" class="text-white w-4 h-4"></i>
+                        </div>
+                        <!-- Content Card -->
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                                <h3 class="font-bold text-xl text-slate-900">High School Teacher | Technologist | Team Leader</h3>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700">Aug 2016 - Present</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-center text-sm text-slate-500 mb-4 gap-2 sm:gap-4">
+                                <span class="font-semibold text-slate-700 flex items-center gap-1">
+                                    <i data-lucide="terminal" class="w-3.5 h-3.5"></i> Navajo Pine High School
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Navajo, NM
+                                </span>
+                            </div>
+                            <ul class="space-y-2 text-slate-600">
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Designed and delivered tech-integrated instruction in STEM and cybersecurity.</li>
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Led training for 20+ staff on EdTech tools (Canva, Adobe Express, AI Educational Tools).</li>
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Created interactive web-based modules for hybrid learning.</li>
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Provided Tier 1 technical support and managed classroom network devices.</li>
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Developed secure workflows for instructional software access and reporting.</li>
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Ensured compliance with FERPA, ADA, and district privacy protocols.</li>
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Collaborated with faculty to improve operational efficiency via instructional design.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="relative flex items-center justify-between md:justify-normal group">
+                        <!-- Timeline Dot -->
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-indigo-500 shadow shrink-0 md:order-1 md:translate-x-1/2 z-10">
+                            <i data-lucide="briefcase" class="text-white w-4 h-4"></i>
+                        </div>
+                        <!-- Content Card -->
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                                <h3 class="font-bold text-xl text-slate-900">Graduate Assistant - Instructional Technology</h3>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700">Aug 2014 - Aug 2016</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-center text-sm text-slate-500 mb-4 gap-2 sm:gap-4">
+                                <span class="font-semibold text-slate-700 flex items-center gap-1">
+                                    <i data-lucide="terminal" class="w-3.5 h-3.5"></i> University of Akron
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Akron, OH
+                                </span>
+                            </div>
+                            <ul class="space-y-2 text-slate-600">
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Supported academic events with AV and IT setup, troubleshooting live tech issues.</li>
+                                <li class="flex items-start gap-2.5"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Deployed and maintained instructional software and digital tools across departments.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-slate-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="p-3 bg-purple-100 text-purple-600 rounded-lg">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Key Projects & Achievements</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 flex flex-col">
+                        <div class="p-8 flex-grow">
+                            <div class="mb-6 p-4 bg-slate-50 rounded-full w-16 h-16 flex items-center justify-center text-blue-600">
+                                <i data-lucide="users" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">EdTech Staff Training Program</h3>
+                            <p class="text-slate-600 leading-relaxed">Led comprehensive training for over 20 staff members on modern educational technology tools including Canva, Adobe Express, and AI Educational Tools, enhancing digital literacy across the institution.</p>
+                        </div>
+                        <div class="px-8 py-4 bg-slate-50 border-t border-slate-100">
+                            <span class="text-sm font-semibold text-blue-600">Achievement Highlight</span>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 flex flex-col">
+                        <div class="p-8 flex-grow">
+                            <div class="mb-6 p-4 bg-slate-50 rounded-full w-16 h-16 flex items-center justify-center text-green-600">
+                                <i data-lucide="code" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Hybrid Learning Modules</h3>
+                            <p class="text-slate-600 leading-relaxed">Developed interactive web-based math modules designed for both in-person and remote learning environments, improving student engagement and accessibility.</p>
+                        </div>
+                        <div class="px-8 py-4 bg-slate-50 border-t border-slate-100">
+                            <span class="text-sm font-semibold text-blue-600">Achievement Highlight</span>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 flex flex-col">
+                        <div class="p-8 flex-grow">
+                            <div class="mb-6 p-4 bg-slate-50 rounded-full w-16 h-16 flex items-center justify-center text-purple-600">
+                                <i data-lucide="shield-check" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Secure Instructional Workflows</h3>
+                            <p class="text-slate-600 leading-relaxed">Designed and maintained secure workflows for instructional technology access and reporting, ensuring data privacy and operational efficiency.</p>
+                        </div>
+                        <div class="px-8 py-4 bg-slate-50 border-t border-slate-100">
+                            <span class="text-sm font-semibold text-blue-600">Achievement Highlight</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="p-3 bg-emerald-100 text-emerald-600 rounded-lg">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Technical Skills & Certifications</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Systems -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i data-lucide="server" class="text-emerald-500 w-4.5 h-4.5"></i> Systems
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Google Admin Console</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">PowerSchool</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Synergy SIS</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">ClassLink</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Clever</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i data-lucide="terminal" class="text-blue-500 w-4.5 h-4.5"></i> Tools
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Zoom</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Google Workspace</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Microsoft Office Suite</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Canva</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Adobe Express</span>
+                        </div>
+                    </div>
+
+                    <!-- Compliance -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i data-lucide="shield-check" class="text-purple-500 w-4.5 h-4.5"></i> Compliance
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">FERPA</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">ADA</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Section 508</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-sm border border-slate-200">Food Safety Protocols</span>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i data-lucide="award" class="text-amber-500 w-4.5 h-4.5"></i> Certifications
+                        </h3>
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></div>Microsoft IT Support Certificate</li>
+                            <li class="flex items-start gap-2"><div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></div>NM Level 2 Teaching License</li>
+                            <li class="flex items-start gap-2"><div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></div>FreeCodeCamp: Responsive Web Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-slate-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="p-3 bg-rose-100 text-rose-600 rounded-lg">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">Education</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Edu 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Master of Education in Instructional Technology</h3>
+                            <p class="text-slate-600">University of Akron</p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <span class="inline-flex px-4 py-1.5 rounded-full text-sm font-semibold bg-rose-50 text-rose-700">2016</span>
+                        </div>
+                    </div>
+                    <!-- Edu 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Bachelor of Science in Mathematics for Teachers & Certificate in Teaching Physics</h3>
+                            <p class="text-slate-600">Philippine Normal University</p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <span class="inline-flex px-4 py-1.5 rounded-full text-sm font-semibold bg-rose-50 text-rose-700">2011</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="bg-slate-900 text-white py-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl font-bold mb-6">Let's Connect</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+                    <a href="mailto:lushventurina@gmail.com" class="flex items-center gap-2 hover:text-blue-400 transition-colors">
+                        <i data-lucide="mail" class="w-5 h-5"></i> lushventurina@gmail.com
+                    </a>
+                    <a href="tel:5055828229" class="flex items-center gap-2 hover:text-blue-400 transition-colors">
+                        <i data-lucide="phone" class="w-5 h-5"></i> (505) 582-8229
+                    </a>
+                    <a href="https://linkedin.com/in/lmventurinajr26" target="_blank" rel="noreferrer" class="flex items-center gap-2 hover:text-blue-400 transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i> LinkedIn Profile
+                    </a>
+                </div>
+                <div class="pt-8 border-t border-slate-800 text-slate-500 text-sm">
+                    <p>&copy; <span id="year"></span> Lucas Venturina. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
